@@ -11,11 +11,17 @@ npm install fastly
 ### Basic Use
 ```javascript
 var fastly = require('fastly')('yourapikey');
+var service = 'yourserviceid';
 
-fastly.request('GET', '/content/edge_check?url=mysite.com/foo', function (err, obj) {
-    if (err) return console.dir(err);   // Oh no!
-    console.dir(obj);                   // Response body from the fastly API
-});
+fastly
+    .version(service)
+    .then(function (res) {
+        var lastVersion = JSON.parse(res).pop().number;
+        console.log('Latest version number is ', lastVersion);
+    })
+    .catch(function (err) {
+        throw new Error(err);
+    })
 ```
 
 ### Helper Methods
@@ -29,22 +35,22 @@ The fastly module also includes a few limited "helper" methods that make working
     </tr>
     <tr>
         <td>purge</td>
-        <td><pre lang="javascript"><code>fastly.purge('host.com', '/index.html', callback);</code></pre></td>
+        <td><pre lang="javascript"><code>fastly.purge('host.com', '/index.html');</code></pre></td>
         <td><a href="http://www.fastly.com/docs/api#purge">Link</a></td>
     </tr>
     <tr>
         <td>purgeAll</td>
-        <td><pre lang="javascript"><code>fastly.purgeAll('myServiceId', callback);</code></pre></td>
+        <td><pre lang="javascript"><code>fastly.purgeAll('myServiceId');</code></pre></td>
         <td><a href="http://www.fastly.com/docs/api#purge">Link</a></td>
     </tr>
     <tr>
         <td>purgeKey</td>
-        <td><pre lang="javascript"><code>fastly.purgeKey('myServiceId', 'key', callback);</code></pre></td>
+        <td><pre lang="javascript"><code>fastly.purgeKey('myServiceId', 'key');</code></pre></td>
         <td><a href="http://www.fastly.com/docs/api#purge">Link</a></td>
     </tr>
     <tr>
         <td>stats</td>
-        <td><pre lang="javascript"><code>fastly.stats('myServiceId', callback);</code></pre></td>
+        <td><pre lang="javascript"><code>fastly.stats('myServiceId');</code></pre></td>
         <td><a href="http://www.fastly.com/docs/api#stats">Link</a></td>
     </tr>
 </table>

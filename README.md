@@ -4,8 +4,10 @@ A [Fastly](http://www.fastly.com) API client for Node.js
 
 ### Installation
 
+This repo is a fork of the one currently installed in NPM, so you'll need to to install it from the tagged tarball,
+
 ```bash
-npm install https://github.com/commuterjoy/fastly/archive/v2.0.0.tar.gz
+npm install https://github.com/commuterjoy/fastly/archive/v2.1.0.tar.gz
 ```
 
 ### Basic Use

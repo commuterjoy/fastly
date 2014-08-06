@@ -13,5 +13,5 @@
     "quotmark": "single",
     "undef": true,
     "unused": true,
-    "maxlen": 80
+    "maxlen": 100
 }

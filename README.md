@@ -10,11 +10,10 @@ npm install fastly
 
 ### Basic Use
 ```javascript
-var fastly = require('fastly')('yourapikey');
-var service = 'yourserviceid';
+var fastly = require('fastly')('your-api-key')('your-service-id');
 
 fastly
-    .version(service)
+    .getVersions()
     .then(function (res) {
         var lastVersion = JSON.parse(res).pop().number;
         console.log('Latest version number is ', lastVersion);

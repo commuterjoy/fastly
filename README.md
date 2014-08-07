@@ -15,7 +15,7 @@ npm install https://github.com/commuterjoy/fastly/archive/v2.1.0.tar.gz
 A simple use of the API looks like this,
 
 ```javascript
-var fastly = require('fastly')('your-api-key')('your-service-id');
+var fastly = require('fastly')('your-api-key', 'your-service-id');
 
 fastly
     .getVersions()
@@ -31,7 +31,7 @@ fastly
 The API is promise-based, so methods can be chained together like so,
 
 ```javascript
-var fastly = require('fastly')('your-api-key')('your-service-id');
+var fastly = require('fastly')('your-api-key', 'your-service-id');
 var Q = require('q');
 var version;
 

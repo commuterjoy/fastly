@@ -607,7 +607,7 @@ module.exports = [
     {
         method: 'GET',
         type: 'vcl',
-        fn: '',
+        fn: 'getVcl',
         url: '/service/%service_id/version/%version/vcl',
         
     },
@@ -649,21 +649,21 @@ module.exports = [
     {
         method: 'POST',
         type: 'vcl',
-        fn: '',
+        fn: 'updateVcl',
         url: '/service/%service_id/version/%version/vcl',
         
     },
     {
         method: 'DELETE',
         type: 'vcl',
-        fn: '',
+        fn: 'deleteVcl',
         url: '/service/%service_id/version/%version/vcl/%name',
         
     },
     {
         method: 'PUT',
         type: 'vcl',
-        fn: '',
+        fn: 'setVclAsMain',
         url: '/service/%service_id/version/%version/vcl/%name/main',
         
     },
@@ -705,7 +705,7 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: '',
+        fn: 'activateVcl',
         url: '/service/%service_id/version/%number/activate',
         
     },
@@ -719,14 +719,14 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: '',
+        fn: 'cloneVcl',
         url: '/service/%service_id/version/%number/clone',
         
     },
     {
         method: 'GET',
         type: 'version',
-        fn: '',
+        fn: 'validateVcl',
         url: '/service/%service_id/version/%number/validate',
         
     },

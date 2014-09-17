@@ -474,7 +474,7 @@ module.exports = [
     {
         method: 'GET',
         type: 'service',
-        fn: '',
+        fn: 'getServices',
         url: '/service',
         
     },
@@ -684,7 +684,7 @@ module.exports = [
     {
         method: 'POST',
         type: 'version',
-        fn: '',
+        fn: 'createVersion',
         url: '/service/%service_id/version',
         
     },

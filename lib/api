@@ -705,7 +705,7 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: 'activateVcl',
+        fn: 'activateVersion',
         url: '/service/%service_id/version/%number/activate',
         
     },
@@ -719,14 +719,14 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: 'cloneVcl',
+        fn: 'cloneVersion',
         url: '/service/%service_id/version/%number/clone',
         
     },
     {
         method: 'GET',
         type: 'version',
-        fn: 'validateVcl',
+        fn: 'validateVersion',
         url: '/service/%service_id/version/%number/validate',
         
     },

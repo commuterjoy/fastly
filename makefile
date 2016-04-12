@@ -2,13 +2,11 @@ JSHINT = ./node_modules/.bin/jshint
 TAP = ./node_modules/.bin/tap
 
 lint:
-	$(JSHINT) ./lib/*.js
+	jshint ./lib/*.js
 
 unit:
-	$(TAP) ./test/unit/*.js
+	tap ./test/unit/*.js --stderr
 
-test:
-	@make lint
-	@make unit
+test:lint unit
 
 .PHONY: lint unit test

@@ -334,35 +334,35 @@ module.exports = [
     {
         method: 'GET',
         type: 'healthcheck',
-        fn: '',
+        fn: 'getHealthcheckByName',
         url: '/service/%service_id/version/%version/healthcheck/%name',
         
     },
     {
         method: 'GET',
         type: 'healthcheck',
-        fn: '',
+        fn: 'getHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck',
         
     },
     {
         method: 'POST',
         type: 'healthcheck',
-        fn: '',
+        fn: 'createHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck',
         
     },
     {
         method: 'DELETE',
         type: 'healthcheck',
-        fn: '',
+        fn: 'deleteHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck/%name',
         
     },
     {
         method: 'PUT',
         type: 'healthcheck',
-        fn: '',
+        fn: 'updateHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck/%old_name',
         
     },

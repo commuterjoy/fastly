@@ -12,7 +12,7 @@ module.exports = [
     {
         method: 'POST',
         type: 'backend',
-        fn: 'updateBackend',
+        fn: 'createBackend',
         url: '/service/%service_id/version/%version/backend',
         
     },
@@ -33,7 +33,7 @@ module.exports = [
     {
         method: 'PUT',
         type: 'backend',
-        fn: 'createBackend',
+        fn: 'updateBackend',
         url: '/service/%service_id/version/%version/backend/%old_name',
         
     },
@@ -334,35 +334,35 @@ module.exports = [
     {
         method: 'GET',
         type: 'healthcheck',
-        fn: '',
+        fn: 'getHealthcheckByName',
         url: '/service/%service_id/version/%version/healthcheck/%name',
         
     },
     {
         method: 'GET',
         type: 'healthcheck',
-        fn: '',
+        fn: 'getHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck',
         
     },
     {
         method: 'POST',
         type: 'healthcheck',
-        fn: '',
+        fn: 'createHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck',
         
     },
     {
         method: 'DELETE',
         type: 'healthcheck',
-        fn: '',
+        fn: 'deleteHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck/%name',
         
     },
     {
         method: 'PUT',
         type: 'healthcheck',
-        fn: '',
+        fn: 'updateHealthcheck',
         url: '/service/%service_id/version/%version/healthcheck/%old_name',
         
     },
@@ -474,7 +474,7 @@ module.exports = [
     {
         method: 'GET',
         type: 'service',
-        fn: '',
+        fn: 'getServices',
         url: '/service',
         
     },
@@ -684,7 +684,7 @@ module.exports = [
     {
         method: 'POST',
         type: 'version',
-        fn: '',
+        fn: 'createVersion',
         url: '/service/%service_id/version',
         
     },
@@ -705,7 +705,7 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: 'activateVcl',
+        fn: 'activateVersion',
         url: '/service/%service_id/version/%number/activate',
         
     },
@@ -719,14 +719,14 @@ module.exports = [
     {
         method: 'PUT',
         type: 'version',
-        fn: 'cloneVcl',
+        fn: 'cloneVersion',
         url: '/service/%service_id/version/%number/clone',
         
     },
     {
         method: 'GET',
         type: 'version',
-        fn: 'validateVcl',
+        fn: 'validateVersion',
         url: '/service/%service_id/version/%number/validate',
         
     },
